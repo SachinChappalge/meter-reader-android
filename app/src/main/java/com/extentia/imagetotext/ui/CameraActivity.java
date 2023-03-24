@@ -2,7 +2,9 @@ package com.extentia.imagetotext.ui;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.ContextWrapper;
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Environment;
@@ -87,7 +89,7 @@ public class CameraActivity extends AppCompatActivity {
         viewModel.getNetworkState().observe(CameraActivity.this, networkState -> {
             hideProgress();
             if ((networkState.getStatus() == NetworkState.Status.SUCCESS)) {
-                Toast.makeText(CameraActivity.this, networkState.getMsg(), Toast.LENGTH_SHORT).show();
+                showDialog(networkState.getMsg());
             } else if (networkState.getStatus() == NetworkState.Status.FAILED) {
                 Toast.makeText(CameraActivity.this, "Fail to scan image, Please try again.!", Toast.LENGTH_SHORT).show();
             }
@@ -106,6 +108,13 @@ public class CameraActivity extends AppCompatActivity {
 
     }
 
+    private void showDialog(String reading){
+        new AlertDialog.Builder(this)
+                .setTitle(getString(R.string.app_name))
+                .setMessage("Meter reading is " + reading)
+                .setPositiveButton(android.R.string.yes, (dialog, which) -> dialog.cancel())
+                .show();
+    }
 
     public void showProgress() {
         progressBar.setVisibility(View.VISIBLE);
