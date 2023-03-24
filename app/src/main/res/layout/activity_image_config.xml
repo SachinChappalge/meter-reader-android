@@ -4,8 +4,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/topLl"
+        android:background="@color/hintTextColor"
+        android:layout_height="48dp" >
+<TextView
+    android:layout_width="wrap_content"
+    android:text="@string/app_name"
+    android:textColor="@color/white"
+    android:layout_centerInParent="true"
+    android:textSize="20sp"
+    android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
+        android:layout_below="@+id/topLl"
         android:layout_height="match_parent"
         android:scrollbars="none">
 
@@ -124,13 +140,12 @@
         android:id="@+id/captureImageTV"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@android:color/darker_gray"
-        android:text="Capture Image"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
         android:layout_alignParentBottom="true"
-        android:layout_margin="13dp"/>
+        android:background="@color/hintTextColor"
+        android:gravity="center"
+        android:text="Capture Image"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

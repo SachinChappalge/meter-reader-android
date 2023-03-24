@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/topLl"
+        android:background="@color/hintTextColor"
+        android:layout_height="48dp" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:textSize="20sp"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <com.otaliastudios.cameraview.CameraView
+        android:layout_width="300dp"
+        android:id="@+id/cameraView"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        app:cameraPictureSizeMinWidth="300"
+        app:cameraPictureSizeMinHeight="300"
+        app:cameraPictureSizeMaxWidth="300"
+        app:cameraPictureSizeMaxHeight="300"
+        app:cameraPictureSizeMinArea="300"
+        app:cameraPictureSizeMaxArea="300"
+        app:cameraPictureSizeSmallest="true"
+        app:cameraEngine="camera2"
+        app:cameraPreview="texture"
+        app:cameraPreviewFrameRateExact="true"
+        app:cameraFacing="back"
+        app:cameraAudio="off"
+        app:cameraHdr="on"
+        app:cameraFlash="off"
+        app:cameraWhiteBalance="auto"
+        app:cameraMode="picture"
+        app:cameraGrid="off"
+        app:cameraUseDeviceOrientation="false"
+        app:cameraPictureFormat="jpeg"
+        app:cameraRequestPermissions="true" />
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:background="@android:color/transparent"
+        android:layout_centerInParent="true"
+        android:layout_height="300dp" >
+        <View
+            android:background="@color/hintTextColor"
+            android:layout_width="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_height="2dp" />
+        <View
+            android:background="@color/hintTextColor"
+            android:layout_width="2dp"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:text="Take Picture"
+        android:id="@+id/tv_picture"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:background="@color/hintTextColor"
+        android:layout_height="60dp" />
+    <LinearLayout
+        android:layout_marginTop="80dp"
+        android:id="@+id/progress_bar_main"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:gravity="center_vertical|center"
+        android:layout_height="wrap_content" >
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/hintTextColor" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/hintTextColor"
+            android:text="Please wait, fetching meter reading."
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

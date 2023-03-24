@@ -41,7 +41,6 @@ public class Repository {
         networkState = new MediatorLiveData();
         try {
             if (isConnected) {
-                RequestBody requestFile = RequestBody.create(MediaType.parse("multipart/form-data"), file);
                 MultipartBody.Part body = MultipartBody.Part.createFormData("file", file.getName(), RequestBody.create(MediaType.parse("image/*"), file));
                 RequestBody maxAngleBody = RequestBody.create(okhttp3.MultipartBody.FORM, maxAngle);
                 RequestBody minAngleBody = RequestBody.create(okhttp3.MultipartBody.FORM, minAngle);
@@ -52,7 +51,7 @@ public class Repository {
                     @Override
                     public void onResponse(Call<ScanResponse> call, Response<ScanResponse> response) {
                         if (response.isSuccessful()) {
-                            networkState.postValue(new NetworkState(NetworkState.Status.SUCCESS, response.message()));
+                            networkState.postValue(new NetworkState(NetworkState.Status.SUCCESS, response.body().getReading()));
                         } else {
                             networkState.postValue(new NetworkState(NetworkState.Status.FAILED, response.message()));
                         }
