@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -45,7 +46,7 @@
 
     <RelativeLayout
         android:layout_width="300dp"
-        android:background="@android:color/transparent"
+        android:background="@drawable/react"
         android:layout_centerInParent="true"
         android:layout_height="300dp" >
         <View
@@ -65,7 +66,7 @@
         android:layout_alignParentBottom="true"
         android:text="Take Picture"
         android:id="@+id/tv_picture"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:textColor="@color/white"
         android:background="@color/hintTextColor"
         android:layout_height="60dp" />

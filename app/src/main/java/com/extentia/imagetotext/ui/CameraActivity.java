@@ -56,7 +56,7 @@ public class CameraActivity extends AppCompatActivity {
                 super.onPictureTaken(result);
                 String fileName = System.currentTimeMillis()+"_meter.jpg";
                 ContextWrapper cw = new ContextWrapper(CameraActivity.this);
-                File directory = cw.getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+                File directory = cw.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS);
 
 
                     File photo = new File(directory, fileName);
