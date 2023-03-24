@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="#02205b" android:state_hovered="true" />
+    <item android:color="@color/mtrl_textinput_default_box_stroke_color" android:state_active="true" />
+    <item android:color="@color/mtrl_textinput_default_box_stroke_color" android:state_activated="true" />
+    <item android:color="#02205b" android:state_focused="true" />
+    <item android:color="#2b2b2b" android:state_enabled="false" />
+    <item android:color="#2b2b2b" />
+</selector>
+

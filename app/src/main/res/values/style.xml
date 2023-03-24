@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="hintTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="android:textSize">14dp</item>
+        <item name="hintTextColor">@color/hintTextColor</item>
+        <item name="colorAccent">@color/hintTextColor</item>
+        <item name="android:textColorHint">@color/hintTextColor</item>
+        <item name="colorControlActivated">@color/hintTextColor</item>
+        <item name="boxStrokeColor">@color/box_background_selector</item>
+        <item name="boxStrokeWidth">0.8dp</item>
+    </style>
+</resources>

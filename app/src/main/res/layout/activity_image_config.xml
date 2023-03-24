@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="13dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/maxValueTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/hintTextInputLayout"
+                android:layout_marginTop="15dp"
+                android:hint="Max Value">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/maxValueET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:paddingBottom="15dp"
+                    android:inputType="number"
+                    android:digits="0123456789-"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:singleLine="true"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/minValueTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/hintTextInputLayout"
+                android:layout_marginTop="15dp"
+                android:hint="Min Value">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/minValueET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:paddingBottom="15dp"
+                    android:inputType="number"
+                    android:digits="0123456789-"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:singleLine="true"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/maxAngleTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/hintTextInputLayout"
+                android:layout_marginTop="15dp"
+                android:hint="Max Angle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/maxAngleET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:paddingBottom="15dp"
+                    android:inputType="number"
+                    android:digits="0123456789-"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:singleLine="true"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/minAngleTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/hintTextInputLayout"
+                android:layout_marginTop="15dp"
+                android:hint="Min Angle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/minAngleET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:paddingBottom="15dp"
+                    android:inputType="number"
+                    android:digits="0123456789-"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:singleLine="true"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/unitsTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/hintTextInputLayout"
+                android:layout_marginTop="15dp"
+                android:hint="Units">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/unitsET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:paddingBottom="15dp"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:singleLine="true"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/captureImageTV"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/darker_gray"
+        android:text="Capture Image"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="13dp"/>
+
+</RelativeLayout>

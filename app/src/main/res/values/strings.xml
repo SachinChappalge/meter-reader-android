@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ImageToText</string>
+    <string name="request_camera_permission">Please provide permission to access camera and storage</string>
+</resources>
