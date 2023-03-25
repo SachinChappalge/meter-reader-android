@@ -90,7 +90,6 @@ public class ConfigActivity extends Activity implements EasyPermissions.Permissi
             Intent intent=new Intent(this, CameraActivity.class);
             intent.putExtra("IMAGE_CONFIG", getImageConfig());
             startActivity(intent);
-            finish();
         }
         else
         {

@@ -23,15 +23,8 @@
         android:id="@+id/cameraView"
         android:layout_height="300dp"
         android:layout_centerInParent="true"
-        app:cameraPictureSizeMinWidth="300"
-        app:cameraPictureSizeMinHeight="300"
-        app:cameraPictureSizeMaxWidth="300"
-        app:cameraPictureSizeMaxHeight="300"
-        app:cameraPictureSizeMinArea="300"
-        app:cameraPictureSizeMaxArea="300"
-        app:cameraPictureSizeSmallest="true"
-        app:cameraEngine="camera2"
-        app:cameraPreview="texture"
+        app:cameraEngine="camera1"
+        app:cameraPreview="glSurface"
         app:cameraPreviewFrameRateExact="true"
         app:cameraFacing="back"
         app:cameraAudio="off"
@@ -39,6 +32,8 @@
         app:cameraFlash="off"
         app:cameraWhiteBalance="auto"
         app:cameraMode="picture"
+        app:cameraPictureMetering="true"
+        app:cameraPreviewFrameRate="8"
         app:cameraGrid="off"
         app:cameraUseDeviceOrientation="false"
         app:cameraPictureFormat="jpeg"
@@ -46,20 +41,22 @@
 
     <RelativeLayout
         android:layout_width="300dp"
-        android:background="@drawable/react"
+        android:layout_height="300dp"
         android:layout_centerInParent="true"
-        android:layout_height="300dp" >
+        android:background="@drawable/react">
+
         <View
-            android:background="@color/hintTextColor"
             android:layout_width="match_parent"
+            android:layout_height="2dp"
             android:layout_centerVertical="true"
-            android:layout_height="2dp" />
+            android:background="@color/hintTextColor" />
+
         <View
-            android:background="@color/hintTextColor"
             android:layout_width="2dp"
+            android:layout_height="match_parent"
             android:layout_centerInParent="true"
             android:layout_centerVertical="true"
-            android:layout_height="match_parent" />
+            android:background="@color/hintTextColor" />
     </RelativeLayout>
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="match_parent"
@@ -91,4 +88,11 @@
             android:text="Please wait, fetching meter reading."
             android:layout_height="wrap_content" />
     </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:id="@+id/image"
+        android:visibility="gone"
+        android:layout_height="wrap_content" />
+
 </RelativeLayout>

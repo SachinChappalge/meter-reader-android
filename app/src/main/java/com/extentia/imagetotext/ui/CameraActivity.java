@@ -6,9 +6,11 @@ import android.app.AlertDialog;
 import android.content.ContextWrapper;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -73,6 +75,8 @@ public class CameraActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
+              //  ((ImageView)findViewById(R.id.image)).setImageURI(Uri.fromFile(photo));
+              //  ((ImageView)findViewById(R.id.image)).setVisibility(View.VISIBLE);
                 uploadFileToServer(photo);
 
 
@@ -105,7 +109,7 @@ public class CameraActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-
+        cameraView.close();
     }
 
     private void showDialog(String reading){
