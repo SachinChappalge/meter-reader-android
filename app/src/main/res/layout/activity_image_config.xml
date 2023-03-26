@@ -135,6 +135,18 @@
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
+    <TextView
+        android:id="@+id/openGallery"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/captureImageTV"
+        android:layout_marginBottom="10dp"
+        android:background="@color/hintTextColor"
+        android:gravity="center"
+        android:text="Gallery"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/captureImageTV"
@@ -143,7 +155,7 @@
         android:layout_alignParentBottom="true"
         android:background="@color/hintTextColor"
         android:gravity="center"
-        android:text="Capture Image"
+        android:text="Camera"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold" />

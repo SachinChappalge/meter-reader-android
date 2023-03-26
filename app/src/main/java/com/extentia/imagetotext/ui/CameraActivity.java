@@ -21,6 +21,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.chaquo.python.PyObject;
+import com.chaquo.python.Python;
 import com.extentia.imagetotext.ImageToTextApp;
 import com.extentia.imagetotext.R;
 import com.extentia.imagetotext.api.ApiInterface;
@@ -77,7 +79,7 @@ public class CameraActivity extends AppCompatActivity {
 
               //  ((ImageView)findViewById(R.id.image)).setImageURI(Uri.fromFile(photo));
               //  ((ImageView)findViewById(R.id.image)).setVisibility(View.VISIBLE);
-                uploadFileToServer(photo);
+                callLocalPython(photo);
 
 
             }
@@ -98,6 +100,13 @@ public class CameraActivity extends AppCompatActivity {
                 Toast.makeText(CameraActivity.this, "Fail to scan image, Please try again.!", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void callLocalPython(File file) {
+
+       Python python = Python.getInstance();
+       PyObject pyObject = python.getModule("analog_reader");
+       pyObject.callAttr("getAnalogMeterReading",file.getName(),file.getAbsolutePath());
     }
 
     @Override
